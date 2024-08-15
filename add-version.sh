@@ -153,6 +153,15 @@ EOF
     success "Formula file updated OK."
 }
 
+
+function update_readme_example() {
+    h2 "Updating the example in the readme."
+    cat $BASEDIR/README.md | sed "s/brew install --no-quarantine galasactl@[0-9.]+/brew install --no-quarantine galasactl@${version_to_add}/1" > ${BASEDIR}/temp/README1.md
+    cat ${BASEDIR}/temp/README1.md | sed "s/add-version.sh --version .* /add-version.sh --version ${version_to_add}/1" > ${BASEDIR}/temp/README2.md
+    mv ${BASEDIR}/temp/README2.md ${BASEDIR}/README.md
+    success "Readme updated OK."
+}
+
 #-----------------------------------------------------------------------------------------
 # Process parameters
 #-----------------------------------------------------------------------------------------
@@ -205,5 +214,7 @@ info "arm64 checksum is $arm64_checksum"
 create_new_version_formula $x86_checksum $arm64_checksum
 
 update_latest_formula $x86_checksum $arm64_checksum
+
+update_readme_example
 
 success "All done OK."

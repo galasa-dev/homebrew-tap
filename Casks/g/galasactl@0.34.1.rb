@@ -1,6 +1,6 @@
 cask "galasactl@0.34.1" do
   arch arm: "arm64", intel: "x86-64"
-  
+
   version "0.34.1"
   # Create the sha256 using shasum --algorithm 256 <file>
   sha256 arm:   "9336ff87dfe927a5fd07f5d59cffeb165680e4ce08ed199350810513b94ad85e",

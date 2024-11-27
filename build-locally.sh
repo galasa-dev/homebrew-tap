@@ -137,6 +137,6 @@ done
 
 source_dir="."
 
-check_secrets
+${BASEDIR}/detect-secrets.sh
 
 success "Project ${project} built - OK - log is at ${log_file}"

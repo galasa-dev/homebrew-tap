@@ -1,5 +1,4 @@
-
-cask "galasactl" do
+cask "galasactl@0.39.0" do
   arch arm: "arm64", intel: "x86-64"
   
   version "0.39.0"
@@ -10,7 +9,7 @@ cask "galasactl" do
   url "https://github.com/galasa-dev/cli/releases/download/v#{version}/galasactl-darwin-#{arch}",
       verified: "github.com/galasa-dev/cli/releases/"
   name "Galasa Client"
-  desc "Client to interact with the Galasa ecosystem or local development environment. Latest version."
+  desc "Client to interact with the Galasa ecosystem or local development environment. Version 0.39.0."
   homepage "https://galasa.dev/"
 
   livecheck do

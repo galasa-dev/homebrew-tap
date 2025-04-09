@@ -89,10 +89,10 @@ function create_new_version_formula() {
     formula_file_path="$BASEDIR/Casks/g/galasactl@$version_to_add.rb"
     h2 "Creating new formula file $formula_file_path"
 
-    cat << EOF > $formula_file_path
+    cat << EOF > ${formula_file_path}
 cask "galasactl@${version_to_add}" do
   arch arm: "arm64", intel: "x86-64"
-  
+
   version "${version_to_add}"
   # Create the sha256 using shasum --algorithm 256 <file>
   sha256 arm:   "${arm64_checksum}",
@@ -101,7 +101,7 @@ cask "galasactl@${version_to_add}" do
   url "https://github.com/galasa-dev/cli/releases/download/v#{version}/galasactl-darwin-#{arch}",
       verified: "github.com/galasa-dev/cli/releases/"
   name "Galasa Client"
-  desc "Client to interact with the Galasa ecosystem or local development environment. Version ${version_to_add}."
+  desc "Client to launch Galasa tests on a Galasa service or locally. Version ${version_to_add}"
   homepage "https://galasa.dev/"
 
   livecheck do

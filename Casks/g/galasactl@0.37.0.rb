@@ -6,8 +6,8 @@ cask "galasactl@0.37.0" do
   sha256 arm:   "5c4fe2c9e99af4ea21961c1b640a8a509b057eca37c27bfeb685d860c3b88b8c",
          intel: "2a019c7ad7c8158c12380a4a66293291d38fc553cc400caee89b8245263e2bc4"
 
-  url "https://github.com/galasa-dev/cli/releases/download/v#{version}/galasactl-darwin-#{arch}",
-      verified: "github.com/galasa-dev/cli/releases/"
+  url "https://github.com/galasa-dev/galasa/releases/download/v#{version}/galasactl-darwin-#{arch}",
+      verified: "github.com/galasa-dev/galasa/releases/"
   name "Galasa Client"
   desc "Command-line client for Galasa. Version 0.37.0"
   homepage "https://galasa.dev/"

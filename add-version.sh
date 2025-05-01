@@ -98,8 +98,8 @@ cask "galasactl@${version_to_add}" do
   sha256 arm:   "${arm64_checksum}",
          intel: "${x86_checksum}"
 
-  url "https://github.com/galasa-dev/cli/releases/download/v#{version}/galasactl-darwin-#{arch}",
-      verified: "github.com/galasa-dev/cli/releases/"
+  url "https://github.com/galasa-dev/galasa/releases/download/v#{version}/galasactl-darwin-#{arch}",
+      verified: "github.com/galasa-dev/galasa/releases/"
   name "Galasa Client"
   desc "Client to launch Galasa tests on a Galasa service or locally. Version ${version_to_add}"
   homepage "https://galasa.dev/"
@@ -134,8 +134,8 @@ cask "galasactl" do
   sha256 arm:   "${arm64_checksum}",
          intel: "${x86_checksum}"
 
-  url "https://github.com/galasa-dev/cli/releases/download/v#{version}/galasactl-darwin-#{arch}",
-      verified: "github.com/galasa-dev/cli/releases/"
+  url "https://github.com/galasa-dev/galasa/releases/download/v#{version}/galasactl-darwin-#{arch}",
+      verified: "github.com/galasa-dev/galasa/releases/"
   name "Galasa Client"
   desc "Client to interact with the Galasa ecosystem or local development environment. Latest version."
   homepage "https://galasa.dev/"
@@ -191,7 +191,7 @@ h1 "Adding version $version_to_add"
 mkdir -p $BASEDIR/temp
 check_exit_code $? "couldn't  create a temporary folder"
 
-url_to_download_from=https://github.com/galasa-dev/cli/releases/download/v${version_to_add}/galasactl-darwin-x86_64
+url_to_download_from=https://github.com/galasa-dev/galasa/releases/download/v${version_to_add}/galasactl-darwin-x86_64
 
 # Work out the base name of the file we want to download.
 target_file_name=$(echo $url_to_download_from | sed "s/.*\///")
@@ -200,7 +200,7 @@ download_executable $url_to_download_from $target_file_path
 x86_checksum=$(shasum --algorithm 256 $target_file_path | cut -f1 -d' ')
 info "x86 checksum is $x86_checksum"
 
-url_to_download_from=https://github.com/galasa-dev/cli/releases/download/v${version_to_add}/galasactl-darwin-arm64
+url_to_download_from=https://github.com/galasa-dev/galasa/releases/download/v${version_to_add}/galasactl-darwin-arm64
 
 # Work out the base name of the file we want to download.
 target_file_name=$(echo $url_to_download_from | sed "s/.*\///")

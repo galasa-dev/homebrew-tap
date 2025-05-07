@@ -125,10 +125,9 @@ function update_latest_formula() {
     h2 "Updating latest-version formula file $formula_file_path"
 
     cat << EOF > $formula_file_path
-
 cask "galasactl" do
   arch arm: "arm64", intel: "x86-64"
-  
+
   version "$version_to_add"
   # Create the sha256 using shasum --algorithm 256 <file>
   sha256 arm:   "${arm64_checksum}",

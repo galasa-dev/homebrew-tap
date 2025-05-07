@@ -9,7 +9,7 @@ cask "galasactl@0.36.0" do
   url "https://github.com/galasa-dev/galasa/releases/download/v#{version}/galasactl-darwin-#{arch}",
       verified: "github.com/galasa-dev/galasa/releases/"
   name "Galasa Client"
-  desc "Command-line client for Galasa. Version 0.36.0"
+  desc "Client to launch Galasa tests on a Galasa service or locally. Version 0.36.0"
   homepage "https://galasa.dev/"
 
   livecheck do

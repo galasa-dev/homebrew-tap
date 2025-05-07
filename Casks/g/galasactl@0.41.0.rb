@@ -1,7 +1,6 @@
-
-cask "galasactl" do
+cask "galasactl@0.41.0" do
   arch arm: "arm64", intel: "x86-64"
-  
+
   version "0.41.0"
   # Create the sha256 using shasum --algorithm 256 <file>
   sha256 arm:   "0b85263e1811ecfdb81de2af5094c685c43a4f1aafb27db65d2edcfd935e22ac",
@@ -10,7 +9,7 @@ cask "galasactl" do
   url "https://github.com/galasa-dev/galasa/releases/download/v#{version}/galasactl-darwin-#{arch}",
       verified: "github.com/galasa-dev/galasa/releases/"
   name "Galasa Client"
-  desc "Client to launch Galasa tests on a Galasa service or locally. Latest version"
+  desc "Client to launch Galasa tests on a Galasa service or locally. Version 0.41.0"
   homepage "https://galasa.dev/"
 
   livecheck do

@@ -137,7 +137,7 @@ cask "galasactl" do
   url "https://github.com/galasa-dev/galasa/releases/download/v#{version}/galasactl-darwin-#{arch}",
       verified: "github.com/galasa-dev/galasa/releases/"
   name "Galasa Client"
-  desc "Client to interact with the Galasa ecosystem or local development environment. Latest version."
+  desc "Client to launch Galasa tests on a Galasa service or locally. Latest version"
   homepage "https://galasa.dev/"
 
   livecheck do

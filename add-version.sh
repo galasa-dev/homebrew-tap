@@ -125,10 +125,9 @@ function update_latest_formula() {
     h2 "Updating latest-version formula file $formula_file_path"
 
     cat << EOF > $formula_file_path
-
 cask "galasactl" do
   arch arm: "arm64", intel: "x86-64"
-  
+
   version "$version_to_add"
   # Create the sha256 using shasum --algorithm 256 <file>
   sha256 arm:   "${arm64_checksum}",
@@ -137,7 +136,7 @@ cask "galasactl" do
   url "https://github.com/galasa-dev/galasa/releases/download/v#{version}/galasactl-darwin-#{arch}",
       verified: "github.com/galasa-dev/galasa/releases/"
   name "Galasa Client"
-  desc "Client to interact with the Galasa ecosystem or local development environment. Latest version."
+  desc "Client to launch Galasa tests on a Galasa service or locally. Latest version"
   homepage "https://galasa.dev/"
 
   livecheck do

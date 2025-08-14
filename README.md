@@ -20,18 +20,18 @@ brew install --no-quarantine galasactl@x.xx.x
 ```
 for example
 ```
-brew install --no-quarantine galasactl@0.42.0
+brew install --no-quarantine galasactl@0.43.0
 ```
 
 At the moment the --no-quarantine is required because otherwise its not possible to run the galasactl. See documentation about this at 
 https://galasa.dev.
 
-## For maintainers: Releaseing a new version
+## For maintainers: Releasing a new version
 Use the helper script `add-version.sh`
 
 For example:
 ```bash
-./add-version.sh --version 0.42.0
+./add-version.sh --version 0.43.0
 ```
 
 The file Cask/g/galasactl.rb will be updated with that version, so people can get that as the latest version.

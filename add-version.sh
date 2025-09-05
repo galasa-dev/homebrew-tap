@@ -90,8 +90,14 @@ function create_new_version_formula() {
     h2 "Creating new formula file $formula_file_path"
 
     cat << EOF > ${formula_file_path}
+#
+# Copyright contributors to the Galasa project
+#
+# SPDX-License-Identifier: EPL-2.0
+#
+
 cask "galasactl@${version_to_add}" do
-  arch arm: "arm64", intel: "x86-64"
+  arch arm: "arm64", intel: "x86_64"
 
   version "${version_to_add}"
   # Create the sha256 using shasum --algorithm 256 <file>
@@ -125,8 +131,14 @@ function update_latest_formula() {
     h2 "Updating latest-version formula file $formula_file_path"
 
     cat << EOF > $formula_file_path
+#
+# Copyright contributors to the Galasa project
+#
+# SPDX-License-Identifier: EPL-2.0
+#
+
 cask "galasactl" do
-  arch arm: "arm64", intel: "x86-64"
+  arch arm: "arm64", intel: "x86_64"
 
   version "$version_to_add"
   # Create the sha256 using shasum --algorithm 256 <file>

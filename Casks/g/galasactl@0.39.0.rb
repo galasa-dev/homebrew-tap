@@ -1,5 +1,11 @@
+#
+# Copyright contributors to the Galasa project
+#
+# SPDX-License-Identifier: EPL-2.0
+#
+
 cask "galasactl@0.39.0" do
-  arch arm: "arm64", intel: "x86-64"
+  arch arm: "arm64", intel: "x86_64"
 
   version "0.39.0"
   # Create the sha256 using shasum --algorithm 256 <file>

@@ -45,7 +45,7 @@ brew install --no-quarantine galasactl@x.xx.x
 For example:
 
 ```bash
-brew install --no-quarantine galasactl@0.43.0
+brew install --no-quarantine galasactl@0.44.0
 ```
 
 > **Note:** The `--no-quarantine` flag is currently required because otherwise it's not possible to run the galasactl binary. See documentation about this at [https://galasa.dev](https://galasa.dev).
@@ -69,7 +69,7 @@ Use the helper script `add-version.sh` to add a new version:
 For example:
 
 ```bash
-./add-version.sh --version 0.43.0
+./add-version.sh --version 0.44.0
 ```
 
 This will:

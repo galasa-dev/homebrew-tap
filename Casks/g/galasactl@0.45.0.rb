@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: EPL-2.0
 #
 
-cask "galasactl" do
+cask "galasactl@0.45.0" do
   arch arm: "arm64", intel: "x86_64"
 
   version "0.45.0"
@@ -15,7 +15,7 @@ cask "galasactl" do
   url "https://github.com/galasa-dev/galasa/releases/download/v#{version}/galasactl-darwin-#{arch}",
       verified: "github.com/galasa-dev/galasa/releases/"
   name "Galasa Client"
-  desc "Client to launch Galasa tests on a Galasa service or locally. Latest version"
+  desc "Client to launch Galasa tests on a Galasa service or locally. Version 0.45.0"
   homepage "https://galasa.dev/"
 
   livecheck do

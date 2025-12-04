@@ -167,7 +167,7 @@ EOF
 
 function update_readme_example() {
     h2 "Updating the example in the readme."
-    cat $BASEDIR/README.md | sed -E "s/[0-9]+[0-9\.]*/${version_to_add}/g" > ${BASEDIR}/temp/README1.md
+    cat $BASEDIR/README.md | sed -E "s/[0-9]+[.][0-9]+[.][0-9\.]*/${version_to_add}/g" > ${BASEDIR}/temp/README1.md
     mv ${BASEDIR}/temp/README1.md ${BASEDIR}/README.md
     success "Readme updated OK."
 }
